@@ -1,71 +1,24 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import ProductView from '../views/ProductView.vue';
+import CartView from '../views/CartView.vue';
+import FavoritesView from '../views/FavoritesView.vue';
+import NotFoundView from '../views/NotFoundView.vue';
 
-// Імпорт компонентів
-import Home from '@/pages/Home.vue';
-import Products from '@/pages/Products.vue';
-import ProductDetails from '@/pages/ProductDetails.vue';
-import Cart from '@/pages/Cart.vue';
-import Favorites from '@/pages/Favorites.vue';
-import Checkout from '@/pages/Checkout.vue';
-import OrderConfirmation from '@/pages/OrderConfirmation.vue';
-import NotFound from '@/pages/NotFound.vue';
-
-const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home,
-    },
-    {
-        path: '/products',
-        name: 'Products',
-        component: Products,
-    },
-    {
-        path: '/products/:category',
-        name: 'ProductCategory',
-        component: Products,
-        props: true,
-    },
-    {
-        path: '/products/:category/:id',
-        name: 'ProductDetails',
-        component: ProductDetails,
-        props: true,
-    },
-    {
-        path: '/cart',
-        name: 'Cart',
-        component: Cart,
-    },
-    {
-        path: '/favorites',
-        name: 'Favorites',
-        component: Favorites,
-    },
-    {
-        path: '/checkout',
-        name: 'Checkout',
-        component: Checkout,
-    },
-    {
-        path: '/order-confirmation',
-        name: 'OrderConfirmation',
-        component: OrderConfirmation,
-    },
-    {
-        path: '/:pathMatch(.*)*',
-        name: 'NotFound',
-        component: NotFound,
-    },
+const routes = [
+  { path: '/', name: 'Home', component: HomeView },
+  { path: '/product/:id', name: 'Product', component: ProductView, props: true },
+  { path: '/cart', name: 'Cart', component: CartView },
+  { path: '/favorites', name: 'Favorites', component: FavoritesView },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundView },
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
-    scrollBehavior() {
-        return { top: 0 };
-    },
+  history: createWebHistory(),
+  routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

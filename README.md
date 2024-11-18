@@ -1,33 +1,48 @@
-# vue-course-lab
+## Огляд
 
-This template should help get you started developing with Vue 3 in Vite.
+**GoodStore** — це простий та функціональний інтернет-магазин, створений на базі Vue.js, TypeScript та Pinia. Додаток використовує [Platzi Fake Store API](https://platzi.com/clases/vue-api/) для отримання даних про продукти та категорії. Стилізація здійснюється за допомогою Tailwind CSS.
 
-## Recommended IDE Setup
+## Основні Функції
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Список Продуктів:** Перегляд доступних товарів.
+- **Фільтрація:** Пошук за назвою, ціновим діапазоном та категорією.
+- **Пагінація:** Перегляд товарів на декількох сторінках.
+- **Кошик:** Додавання товарів до кошика з можливістю перегляду та видалення.
+- **Улюблені:** Збереження улюблених товарів.
+- **Сторінка 404:** Відображення сторінки при неправильному маршруті.
 
-## Type Support for `.vue` Imports in TS
+## Використані Технології
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Vue.js 3**
+- **TypeScript**
+- **Pinia**
+- **Axios**
+- **Tailwind CSS**
+- **ESLint**
+- **Vite**
+- **Vue Router**
 
-## Customize configuration
+## Встановлення
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Передумови
 
-## Project Setup
+- **Node.js** (v14 або новіше)
+- **npm** (v6 або новіше)
 
-```sh
-npm install
-```
+### Кроки
 
-### Compile and Hot-Reload for Development
+1. **Клонування Репозиторію**
 
-```sh
-npm run dev
-```
+   ```bash
+   git clone https://github.com/stugnait/vue-course-lab
+   cd vue-course-lab
 
-### Type-Check, Compile and Minify for Production
+2. **Встановлення Залежностей**
 
-```sh
-npm run build
-```
+   ```bash
+   npm install
+
+3. **Запуск Розробницького Серверу**
+
+   ```bash
+   npm run dev
